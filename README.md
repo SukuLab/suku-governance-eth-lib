@@ -1,3 +1,6 @@
+![Publish NPM Package](https://github.com/SukuLab/suku-governance-eth-lib/workflows/Publish%20NPM%20Package/badge.svg)
+[![npm version](https://badge.fury.io/js/%40suku%2Fsuku-governance-eth-lib.svg)](https://badge.fury.io/js/%40suku%2Fsuku-governance-eth-lib)
+
 # SUKU Governance ETH Library
 Welcome to the Governance ETH Library.
 
