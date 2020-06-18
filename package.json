@@ -1,0 +1,68 @@
+{
+	"name": "@suku/suku-governance-eth-lib",
+	"version": "1.0.0",
+	"description": "A simple library used to handle SUKU's governance mechanism signing and verification accross microservices using Ethereum's Elliptic Curve Digitial Signature Algorithm.",
+	"main": "./dist/signverifyvote.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/SukuLab/suku-governance-eth-lib.git"
+	},
+	"scripts": {
+		"compile": "tsc --sourcemap && node --nolazy --inspect-brk=9229 ./dist/example.js",
+		"dev": "nodemon -e ts --exec \"npm run compile\"",
+		"test": "nyc mocha --exit --timeout 60000 -r ts-node/register ./test/**/*.ts",
+		"build": "tsc",
+		"prepare": "npm run build",
+		"example": "npm run build && node ./dist/example.js"
+	},
+	"nyc": {
+		"extension": [
+			".ts",
+			".tsx"
+		],
+		"exclude": [
+			"**/*.d.ts",
+			"dist/",
+			"src/log.ts",
+			"src/example.ts"
+		],
+		"all": true
+	},
+	"author": "Bryce Doganer",
+	"license": "ISC",
+	"dependencies": {
+		"@suku/suku-logging": "^1.0.2",
+		"@suku/typed-rx-emitter": "^1.1.5",
+		"abi-decoder": "^1.0.9",
+		"bignumber.js": "^8.1.1",
+		"bn.js": "^5.0.0",
+		"config": "^1.30.0",
+		"es6-promise": "^4.2.8",
+		"human-standard-token-abi": "^2.0.0",
+		"rsvp": "^4.8.5",
+		"rxjs": "^5.5.12",
+		"truffle-hdwallet-provider": "^1.0.15",
+		"ultron": "^1.1.1",
+		"underscore": "^1.8.3",
+		"web3": "1.0.0-beta.55",
+		"web3-providers": "^1.0.0-beta.55",
+		"winston": "^3.2.1"
+	},
+	"devDependencies": {
+		"@types/chai": "^4.1.2",
+		"@types/es6-promise": "^3.3.0",
+		"@types/mocha": "^2.2.48",
+		"@types/node": "^9.6.50",
+		"@types/ws": "^5.1.0",
+		"body-parser": "^1.19.0",
+		"chai": "^4.2.0",
+		"cors": "^2.8.5",
+		"express": "^4.17.1",
+		"mocha": "^6.2.0",
+		"nyc": "^14.1.1",
+		"ts-node": "^8.3.0",
+		"tslint": "^5.18.0",
+		"typescript": "^3.5.3",
+		"ws": "^5.2.2"
+	}
+}

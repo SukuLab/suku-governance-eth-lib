@@ -1,0 +1,7 @@
+tsconfig.json
+src/
+test/
+.nyc_output/
+log/
+.vscode/
+coverage/
